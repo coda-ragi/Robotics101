@@ -1,0 +1,119 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Python for Numerical Computing (Slides 41 & 42)\n",
+    "\n",
+    "## Overview\n",
+    "This notebook contains a sample program demonstrating how to use **NumPy**, **SciPy**, and **Matplotlib** to model and simulate a robotic system. \n",
+    "\n",
+    "### Problem Statement:\n",
+    "Simulate a robot moving in a 2D environment toward a target goal and determine how close the robot reached the goal.\n",
+    "\n",
+    "### Core Ecosystem Stack Used:\n",
+    "* **NumPy**: Handles robot data using numerical arrays and matrix operations.\n",
+    "* **SciPy**: Provides scientific and numerical algorithms (specifically calculating Euclidean distance).\n",
+    "* **Matplotlib**: Handles data visualization to plot the robot's trajectory."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Slide 41: Initializing Packages and Robot Variables\n",
+    "\n",
+    "In this phase, the necessary libraries are imported and the initial constraints of the simulation are defined:\n",
+    "* The initial starting pose of the robot ($X=0, Y=0$).\n",
+    "* The target coordinate goal ($X=5, Y=4$).\n",
+    "* An array of incremental movement vectors `(dx, dy)` representing the robot's steps.\n",
+    "* A Python list initialized with the starting pose to record the trajectory."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Import necessary packages\n",
+    "import numpy as np\n",
+    "from scipy.spatial.distance import euclidean\n",
+    "import matplotlib.pyplot as plt\n",
+    "\n",
+    "# Robot starting position\n",
+    "pose = np.array([0, 0])\n",
+    "\n",
+    "# Goal position\n",
+    "goal = np.array([5, 4])\n",
+    "\n",
+    "# Robot movements (dx, dy)\n",
+    "motions = np.array([[1, 1], [1, 0.5], [1, 0.5], [1, 1]])\n",
+    "\n",
+    "# Store robot path by initiating a list\n",
+    "path = [pose]\n",
+    "\n",
+    "print(\"Initial Pose:\", pose)\n",
+    "print(\"Goal Position:\", goal)\n",
+    "print(\"Motion Steps:\\n\", motions)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Slide 42: Execution, Analysis, and Visualization\n",
+    "\n",
+    "In this step, the simulation loop executes:\n",
+    "1. **Update Position**: The loop iterates through each movement step, recursively adding the displacement vector to the robot's current pose.\n",
+    "2. **Log Path**: The updated pose is appended to the path list, which is subsequently converted into a NumPy matrix array for structural slicing.\n",
+    "3. **Compute Final Distance**: SciPy's `euclidean()` utility analyzes the spatial distance between the last element of the path matrix (`path[-1]`) and the goal.\n",
+    "4. **Plot Trajectory**: Matplotlib draws a visual layout of the map environment, mapping the discrete coordinate steps against the goal target point."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Update robot position by looping through the movement steps\n",
+    "for m in motions:\n",
+    "    pose = pose + m\n",
+    "    # Append the updated pose to the path\n",
+    "    path.append(pose)\n",
+    "\n",
+    "# Convert list to numpy array\n",
+    "path = np.array(path)\n",
+    "\n",
+    "# Compute final Euclidean distance to goal using SciPy\n",
+    "dist = euclidean(path[-1], goal)\n",
+    "print(f\"Final Pose: {path[-1]}\")\n",
+    "print(f\"Euclidean distance to the goal: {dist:.4f} meters\")\n",
+    "\n",
+    "# Visualize robot path using matplotlib\n",
+    "plt.figure(figsize=(7, 5))\n",
+    "plt.plot(path[:, 0], path[:, 1], '-o', label=\"Robot Path\", markersize=8)\n",
+    "plt.scatter(goal[0], goal[1], color='red', s=100, zorder=5, label=\"Goal\")\n",
+    "\n",
+    "# Graph Formatting\n",
+    "plt.title(\"Robot Movement\")\n",
+    "plt.xlabel(\"X position\")\n",
+    "plt.ylabel(\"Y position\")\n",
+    "plt.xlim(-0.5, 6.0)\n",
+    "plt.ylim(-0.5, 5.0)\n",
+    "plt.grid(True)\n",
+    "plt.legend()\n",
+    "plt.show()"
+   ]
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
