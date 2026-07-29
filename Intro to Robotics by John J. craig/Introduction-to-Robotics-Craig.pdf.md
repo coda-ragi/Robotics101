@@ -51,7 +51,7 @@ Description of {B} relative to {A}
 
 > A **position vector** and a **rotation matrix** are the quantities that **describe that frame relative to another frame**.
 
-![image](PNGs\Pasted image 20260729115101.png)
+![image](PNGs/Pasted%20image%2020260729115101.png)
 
 
 
@@ -62,5 +62,5 @@ Description of {B} relative to {A}
 
 
 
-![image](PNGs\Pasted image 20260728142832.png)
-![image](PNGs\Pasted image 20260728142915.png)
+![image](PNGs/Pasted%20image%2020260728142832.png)
+![image](PNGs/Pasted%20image%2020260728142915.png)
