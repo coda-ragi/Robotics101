@@ -1,3 +1,4 @@
+> Integrated notes from NPTEL lectures and John J. Craig textbook.
 
 ## CH: 2 -- Spatial descriptions and transformations
 
@@ -53,14 +54,37 @@ Description of {B} relative to {A}
 
 ![image](PNGs/Pasted%20image%2020260729115101.png)
 
+---
+### Position Vectors
 
-
-
-
-
-
-
-
+– Once a coordinate system is established, we can locate any point in the universe
+with a 3 x 1 position vector.
+– Each of these distances along an axis can be thought of as the result of projecting
+the vector onto the corresponding axis.
+– We will describe the position of a point in space with a position vector.
+– The position of a point P relative to a coordinate frame {A} is represented by a
+vector:
+![[Pasted image 20260729131710.png]]
 
 ![image](PNGs/Pasted%20image%2020260728142832.png)
+
+### Orientation Representation
+
+– To describe an object in space, we need to specify its
+position as well as its orientation.
+– While position describes where an object or manipulation
+is located, orientation describes how it is rotated relative to
+another coordinate frame.
+– Assuming that the manipulator has sufficient number of
+joints to orient the object in desired orientation while
+keeping the fingertip at same position in space.
+– To describe the orientation of a body, we attach a
+coordinate system to the body and then give a description
+of this coordinate system relative to the reference system.
+– One way to describe the body attached coordinate system
+{B} is to write the unit vectors of its three principal axes in
+terms of the coordinate system {A}.
+
 ![image](PNGs/Pasted%20image%2020260728142915.png)
+![image](PNGs/Pasted%20image%2020260729132254%201.png)
+
