@@ -1,3 +1,7 @@
+---
+tags:
+  - notes
+---
 > Integrated notes from NPTEL lectures and John J. Craig textbook.
 
 ## CH: 2 -- Spatial descriptions and transformations
@@ -64,9 +68,10 @@ the vector onto the corresponding axis.
 - We will describe the position of a point in space with a position vector.
 - The position of a point P relative to a coordinate frame {A} is represented by a
 vector:
+
 ![image](PNGs/Pasted%20image%2020260729131710.png)
 
-![image](PNGs/Pasted%20image%2020260728142832.png)
+![image|697](PNGs/Pasted%20image%2020260728142832.png)
 
 ### Orientation Representation
 
@@ -84,7 +89,7 @@ of this coordinate system relative to the reference system.
 - One way to describe the body attached coordinate system
 {B} is to write the unit vectors of its three principal axes in
 terms of the coordinate system {A}.
-
+![[Pasted image 20260729132254 1.png]]
 ![image](PNGs/Pasted%20image%2020260728142915.png)
-![image](PNGs/Pasted%20image%2020260729132254%201.png)
+![image|432](PNGs/Pasted%20image%2020260729132254%201.png)
 
