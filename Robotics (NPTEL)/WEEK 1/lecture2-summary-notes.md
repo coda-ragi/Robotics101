@@ -43,11 +43,17 @@ A robotic system is a sophisticated integration of several key components, each 
 
 Robotics is inherently interdisciplinary, drawing expertise from several engineering and scientific fields. The lecture identifies four distinct modules, each falling under different disciplinary umbrellas:
 
-* **Mechanical Engineering**: This domain encompasses:
+* **Mechanical Engineering**:
+* 
+This domain encompasses:
 * **Kinematics**: The study of robot motion (relative motion of joints and links) without considering the forces involved. It focuses on the geometry of movement.
 * **Dynamics**: The study of robot motion considering the forces and torques required to produce that motion. This involves calculating forces for linear joints and moments/torques for rotary joints.
 * **Sensing**: The design and application of sensors to collect environmental information, often involving mechanical principles for sensor operation.
-* **Computer Science**: This domain is critical for a robot's intelligence and decision-making:
+---
+
+* **Computer Science**: 
+
+This domain is critical for a robot's intelligence and decision-making:
 * **Motion Planning**: Algorithms that determine the optimal sequence of actions for a robot to achieve a goal, considering inputs and desired outputs. This involves traditional and soft computing approaches.
 * **Artificial Intelligence (AI)**: The principles used to model human intelligence in an artificial way, enabling robots to plan, learn, and make decisions. AI in robotics includes traditional and non-traditional (computational intelligence/soft computing) techniques.
 * **Electrical and Electronics Engineering**: This domain focuses on the execution and control of robot movements:
@@ -61,9 +67,11 @@ Robot joints are fundamental to their movement capabilities, each offering speci
 
 * **Linear Joints (1 DOF)**:
 * **Sliding/Prismatic Joint (P)**: Allows linear translational movement along a single axis. The joint angle (theta_j) remains fixed, while a linear displacement (d_j) varies. It has one connectivity and one degree of freedom.
+
 * **Rotary Joints (1 DOF)**:
 * **Revolute Joint (R)**: Allows rotational movement about a single axis. A fixed offset (d_j) is maintained, while the joint angle (theta_j) varies. It has one connectivity and one degree of freedom. An example is rotating your head side-to-side.
 * **Twisting Joint**: Also a rotary joint, but distinct from a revolute joint. The lecture illustrates this with the human neck: rotating the head side-to-side is a revolute joint, while tilting the head (ear to shoulder) is a twisting joint, where the axis of rotation is aligned with the output link.
+
 * **Multi-DOF Joints**:
 * **Cylindrical Joint (C) (2 DOF)**: A combination of a linear (prismatic) and a rotary (revolute) joint. It allows both sliding along an axis and rotation about that same axis. Both the linear displacement (d_j) and the joint angle (theta_j) are variables, providing two degrees of freedom.
 * **Hooke Joint / Universal Joint (U) (2 DOF)**: A combination of two revolute joints whose axes are typically perpendicular and intersect. It allows two rotational degrees of freedom. These are generally not used in serial manipulators but find application in parallel manipulators.

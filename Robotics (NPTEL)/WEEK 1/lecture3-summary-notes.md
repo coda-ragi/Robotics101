@@ -79,6 +79,7 @@ While ideal manipulators have specific DOFs, real-world applications often neces
 Mobility (M) is a quantitative measure of a robot's degrees of freedom, calculated using Grubler's criterion. It helps determine the total number of independent motions a manipulator can perform.
 
 * **Distinction between DOF and Mobility**: While often used interchangeably, "mobility" is sometimes preferred when the calculated degrees of freedom exceed the "ideal" maximum (e.g., 6 for spatial, 3 for planar). A robot might have a mobility level of 10, rather than saying it has 10 DOFs, to emphasize that 6 is the maximum for full spatial manipulation.
+
 * **Grubler's Criterion for Spatial Manipulators (3D)**:
 * Considers a manipulator with `n` rigid moving links and `m` joints.
 * Each rigid body in 3D space has 6 DOFs. So, `n` links initially have `6n` total DOFs.
@@ -86,6 +87,7 @@ Mobility (M) is a quantitative measure of a robot's degrees of freedom, calculat
 * A joint with connectivity `Ci` imposes `(6 - Ci)` constraints on the system.
 * The total number of constraints from `m` joints is `Σ(6 - Ci)` for `i = 1 to m`.
 * The mobility `M` is given by: `M = 6n - Σ(6 - Ci)`
+
 * **Grubler's Criterion for Planar Manipulators (2D)**:
 * For a planar manipulator, each rigid body in 2D space has 3 DOFs. So, `n` links initially have `3n` total DOFs.
 * Each joint `i` with connectivity `Ci` imposes `(3 - Ci)` constraints on the system.
@@ -98,10 +100,12 @@ Let's apply Grubler's criterion to calculate the mobility of different manipulat
 
 * **Example 1: Serial Planar Manipulator**
 * **Configuration**: Fixed base, followed by a revolute joint, a second revolute joint, a prismatic joint, and a final revolute joint connected to an end-effector. All joints are planar.
+
 * **Parameters**:
 * Number of moving links (`n`): 4 (excluding the fixed base).
 * Number of joints (`m`): 4 (R, R, P, R).
 * Connectivity of each joint (`Ci`): All revolute and prismatic joints in a planar system have `Ci = 1`.
+
 * **Calculation**:
 * Total initial DOFs: `3n = 3 * 4 = 12`.
 * Constraints per joint: `(3 - Ci) = (3 - 1) = 2`.
@@ -111,10 +115,12 @@ Let's apply Grubler's criterion to calculate the mobility of different manipulat
 
 * **Example 2: Parallel Planar Manipulator**
 * **Configuration**: A fixed base connected to a top plate (end-effector) via three parallel legs. Each leg consists of a revolute joint, a prismatic joint, and another revolute joint.
+
 * **Parameters**:
 * Number of moving links (`n`): Each leg has 2 moving links (between the joints), plus the top plate as 1 moving link. So, `n = (3 * 2) + 1 = 7`.
 * Number of joints (`m`): Each leg has 3 joints (R, P, R). So, `m = 3 * 3 = 9`.
 * Connectivity of each joint (`Ci`): All revolute and prismatic joints in a planar system have `Ci = 1`.
+
 * **Calculation**:
 * Total initial DOFs: `3n = 3 * 7 = 21`.
 * Constraints per joint: `(3 - Ci) = (3 - 1) = 2`.
