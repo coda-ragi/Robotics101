@@ -64,7 +64,7 @@ the vector onto the corresponding axis.
 – We will describe the position of a point in space with a position vector.
 – The position of a point P relative to a coordinate frame {A} is represented by a
 vector:
-![[Pasted image 20260729131710.png]]
+![image](PNGs/Pasted%20image%2020260729131710.png)
 
 ![image](PNGs/Pasted%20image%2020260728142832.png)
 
