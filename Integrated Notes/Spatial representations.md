@@ -56,7 +56,7 @@ Description of {B} relative to {A}
 
 > A **position vector** and a **rotation matrix** are the quantities that **describe that frame relative to another frame**.
 
-![image](PNGs/Pasted%20image%2020260729115101.png)
+![image](Pasted%20image%2020260729115101.png)
 
 ---
 ### Position Vectors
@@ -69,9 +69,9 @@ the vector onto the corresponding axis.
 - The position of a point P relative to a coordinate frame {A} is represented by a
 vector:
 
-![image](PNGs/Pasted%20image%2020260729131710.png)
+![image](Pasted%20image%2020260729131710.png)
 
-![image|697](PNGs/Pasted%20image%2020260728142832.png)
+![image|697](Pasted%20image%2020260728142832.png)
 
 ### Orientation Representation
 
@@ -89,7 +89,8 @@ of this coordinate system relative to the reference system.
 - One way to describe the body attached coordinate system
 {B} is to write the unit vectors of its three principal axes in
 terms of the coordinate system {A}.
+
 ![[Pasted image 20260729132254 1.png]]
-![image](PNGs/Pasted%20image%2020260728142915.png)
-![image|432](PNGs/Pasted%20image%2020260729132254%201.png)
+![image](Pasted%20image%2020260728142915.png)
+![image|697](Pasted%20image%2020260729132254%201.png)
 
